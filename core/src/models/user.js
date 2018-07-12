@@ -1,33 +1,31 @@
-import mongoose from 'mongoose'
-import { hashPwd } from '../util/password'
+import mongoose, { Schema } from 'mongoose';
+import { hashPwd } from '../util/password';
 
-const { Types } = mongoose.Schema
-
-const schema = new mongoose.Schema({
+const schema = new Schema({
   firstName: {
-    type: Types.String,
+    type: Schema.Types.String,
     required: true
   },
   lastName: {
-    type: Types.String,
+    type: Schema.Types.String,
     required: true
   },
   email: {
-    type: Types.String,
+    type: Schema.Types.String,
     required: true
   },
   password: {
-    type: Types.String,
+    type: Schema.Types.String,
     required: true
   }
-})
+});
 
 /**
  * before save the user, we need to hash his
  * password first.
  */
-schema.pre('save', async function () {
-  this.password = await hashPwd(this.password)
-})
+schema.pre('save', async function onPreUserSave() {
+  this.password = await hashPwd(this.password);
+});
 
-export default mongoose.model('User', schema)
+export default mongoose.model('User', schema);

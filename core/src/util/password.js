@@ -1,4 +1,4 @@
-import Bcrypt from 'bcryptjs'
+import Bcrypt from 'bcryptjs';
 
 /**
  * Hash a password using Bcrypt algorithm.
@@ -7,14 +7,16 @@ import Bcrypt from 'bcryptjs'
 export const hashPwd = (pwd) => {
   return new Promise((resolve, reject) => {
     Bcrypt.genSalt(10, (err, salt) => {
-      if (err) { return reject(err) }
-      Bcrypt.hash(pwd, salt, (err, hash) => {
-        if (err) { return reject(err) }
-        resolve(hash)
-      })
-    })
-  })
-}
+      if (err) { reject(err); }
+      else {
+        Bcrypt.hash(pwd, salt, (hashErr, hash) => {
+          if (err) { reject(hashErr); }
+          resolve(hash);
+        });
+      }
+    });
+  });
+};
 
 /**
  * Check if a password is correct.
@@ -24,8 +26,8 @@ export const hashPwd = (pwd) => {
 export const checkPwd = (pwd, hash) => {
   return new Promise((resolve, reject) => {
     Bcrypt.compare(pwd, hash, (err, res) => {
-      if (err) { return reject(err) }
-      return res
-    })
-  })
-}
+      if (err) { reject(err); }
+      else { resolve(res); }
+    });
+  });
+};

@@ -1,8 +1,8 @@
-import Hapi from 'hapi'
-import { graphqlHapi, graphiqlHapi } from 'apollo-server-hapi'
-import signale from 'signale'
-import makeSchema from './graph'
-import connect from './database'
+import Hapi from 'hapi';
+import { graphqlHapi, graphiqlHapi } from 'apollo-server-hapi';
+import signale from 'signale';
+import makeSchema from './graph';
+import connect from './database';
 
 /**
  * Entry point of the application.
@@ -13,40 +13,39 @@ import connect from './database'
 const run = async () => {
   const server = new Hapi.Server({
     host: 'localhost',
-    port: 3000
-  })
+    port: 3000,
+  });
   await server.register({
     plugin: graphqlHapi,
     options: {
       path: '/graphql',
       graphqlOptions: {
-        schema: makeSchema()
+        schema: makeSchema(),
       },
       route: {
-        cors: true
-      }
-    }
-  })
+        cors: true,
+      },
+    },
+  });
   await server.register({
     plugin: graphiqlHapi,
     options: {
       path: '/graphiql',
       graphiqlOptions: {
-        endpointURL: '/graphql'
-      }
-    }
-  })
-  await server.start()
-}
+        endpointURL: '/graphql',
+      },
+    },
+  });
+  await server.start();
+};
 
 const onSuccess = () => {
-  connect()
-  signale.success('Core started')
-}
+  signale.success('Core started');
+};
 
 const onFail = (e) => {
-  signale.fatal(`Core failed to start: ${e.message}`)
-  process.exit(-1)
-}
+  signale.fatal(`Core failed to start: ${e.message}`);
+  process.exit();
+};
 
-run().then(onSuccess).catch(onFail)
+run().then(onSuccess).then(connect).catch(onFail);
