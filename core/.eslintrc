@@ -1,10 +1,9 @@
 {
     "parser": "babel-eslint",
-    "extends": "standard",
+    "extends": "airbnb-base",
     "plugins": [
         "import",
-        "node",
-        "standard"
+        "node"
     ],
     "parserOptions": {
         "ecmaVersion": 6,
@@ -14,5 +13,11 @@
         "browser": true,
         "es6": true,
         "node": true
+    },
+    "rules": {
+      "brace-style": "off",
+      "arrow-body-style": "off",
+      "comma-dangle": "off",
+      "no-use-before-define": "off"
     }
 }
