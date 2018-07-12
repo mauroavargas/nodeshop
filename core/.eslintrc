@@ -1,0 +1,18 @@
+{
+    "parser": "babel-eslint",
+    "extends": "standard",
+    "plugins": [
+        "import",
+        "node",
+        "standard"
+    ],
+    "parserOptions": {
+        "ecmaVersion": 6,
+        "sourceType": "module"
+    },
+    "env": {
+        "browser": true,
+        "es6": true,
+        "node": true
+    }
+}
