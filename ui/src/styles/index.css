@@ -1,2 +1,12 @@
-@import "./base.css";
-@import "./App.css";
+@import "base.css";
+@import "common.css";
+@import "transitions.css";
+/* Atoms and Molecules */
+@import "text.css";
+@import "image.css";
+@import "input.css";
+/* Pages */
+@import "app.css";
+/* Organisms */
+@import "brand.css";
+@import "banner.css";
