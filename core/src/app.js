@@ -13,7 +13,7 @@ import connect from './database';
 const run = async () => {
   const server = new Hapi.Server({
     host: 'localhost',
-    port: 3000,
+    port: 4000,
   });
   await server.register({
     plugin: graphqlHapi,
@@ -40,7 +40,7 @@ const run = async () => {
 };
 
 const onSuccess = () => {
-  signale.success('Core started');
+  signale.success('API started at :4000');
 };
 
 const onFail = (e) => {
