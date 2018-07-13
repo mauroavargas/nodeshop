@@ -1,0 +1,175 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;;
+  margin: 0;
+  padding: 0;
+}
+*::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+}
+*::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 20px;
+}
+*::-webkit-scrollbar-track {
+  background: #ddd;
+  border-radius: 20px;
+}
+body {
+  font-family: 'Lato';
+  font-size: 1rem;
+}
+a {
+  color: #555;
+  text-decoration: none;
+}
+i.material-icons {
+  color: #555;
+}
+/* Fade transition */
+.fade-appear,
+.fade-enter {
+  opacity: 0.01;
+}
+.fade-appear-active,
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+.fade-exit {
+  opacity: 1;
+}
+.fade-exit-active {
+  opacity: 0.01;
+  transition: opacity 500ms ease-in;
+}
+/* Atoms and Molecules */
+.text {
+  color: #555;
+  font-size: 1rem
+}
+.text.light {
+    color: #888;
+    font-weight: 300;
+  }
+.text.bold {
+    font-weight: 600;
+  }
+.text.danger {
+    color: #d53400;
+  }
+.image {
+  background-repeat: no-repeat;
+  background-size: cover
+}
+.image.small {
+    height: 50px;
+    width: 50px;
+  }
+.image.medium {
+    height: 100px;
+    width: 100px;
+  }
+.input {
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  box-shadow: 0 1px 8px 0px rgba(0,0,0,.1) inset;
+  color: #555;
+  font-size: 0.875rem;
+  height: 35px;
+  padding: 0 12px;
+  width: 100%;
+}
+.input::-webkit-input-placeholder {
+  font-family: 'Roboto Condensed';
+  letter-spacing: 0.0875rem;
+}
+.input:-ms-input-placeholder {
+  font-family: 'Roboto Condensed';
+  letter-spacing: 0.0875rem;
+}
+.input::-ms-input-placeholder {
+  font-family: 'Roboto Condensed';
+  letter-spacing: 0.0875rem;
+}
+.input::placeholder {
+  font-family: 'Roboto Condensed';
+  letter-spacing: 0.0875rem;
+}
+.input-search {
+  position: relative
+}
+.input-search .input {
+    border-radius: 23px;
+    padding-left: 40px;
+  }
+.input-search .material-icons {
+    color: #888;
+    left: 10px;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+/* Pages */
+.app {
+  display: block;
+}
+/* Organisms */
+.brand {
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  height: 60px;
+  justify-content: space-between;
+  padding: 0 25px
+}
+.brand .logo {
+    display: inline-block;
+  }
+.brand .input-search {
+    min-width: 250px
+  }
+.brand .input-search .input {
+      border: none;
+      box-shadow: none
+    }
+.brand .input-search .input::-webkit-input-placeholder {
+        font-size: 1rem;
+        font-weight: 300;
+      }
+.brand .input-search .input:-ms-input-placeholder {
+        font-size: 1rem;
+        font-weight: 300;
+      }
+.brand .input-search .input::-ms-input-placeholder {
+        font-size: 1rem;
+        font-weight: 300;
+      }
+.brand .input-search .input::placeholder {
+        font-size: 1rem;
+        font-weight: 300;
+      }
+.brand .input-search .input:focus {
+        outline: none;
+      }
+.brand a:not(.logo):hover {
+    color: #888;
+  }
+.banner {
+  align-items: center;
+  background-color: #fbfbfb;
+  border-bottom: 1px solid #ddd;
+  box-shadow: 0 1px 10px 0 rgba(0,0,0,.1) inset;
+  display: flex;
+  height: 50px;
+  justify-content: center
+}
+.banner .text:nth-child(2) {
+    margin: 0 12px;
+  }
