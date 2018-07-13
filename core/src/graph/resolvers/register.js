@@ -1,16 +1,15 @@
+import BadRequestError from '../../errors/bad-request';
 import * as UserService from '../../services/user';
 
 export default async (_, args) => {
   try {
-    const user = await UserService.create(args);
-    return {
-      status: 200,
-      data: user
-    };
+    return await UserService.create(args);
   } catch (e) {
-    return {
-      status: 400,
-      error: e.message
-    };
+    throw new BadRequestError({
+      data: {
+        reason: e.message,
+        code: 400
+      }
+    });
   }
 };
