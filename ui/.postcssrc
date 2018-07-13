@@ -1,7 +1,7 @@
 {
     "plugins": {
-        "postcss-nested": {},
         "postcss-import": {},
+        "postcss-nesting": {},
         "postcss-pxtorem": {},
         "autoprefixer": {}
     }
