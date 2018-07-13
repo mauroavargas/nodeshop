@@ -1,5 +1,0 @@
-type UserCreateResponse {
-  status: Int
-  data: User
-  error: String
-}
