@@ -1,5 +1,6 @@
 import Hapi from 'hapi';
 import { graphqlHapi, graphiqlHapi } from 'apollo-server-hapi';
+import { formatError } from 'apollo-errors';
 import signale from 'signale';
 import makeSchema from './graph';
 import connect from './database';
@@ -21,6 +22,8 @@ const run = async () => {
       path: '/graphql',
       graphqlOptions: {
         schema: makeSchema(),
+        formatError,
+        debug: false
       },
       route: {
         cors: true,
