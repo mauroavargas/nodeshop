@@ -1,0 +1,13 @@
+.image {
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &.small {
+    height: 50px;
+    width: 50px;
+  }
+  &.medium {
+    height: 100px;
+    width: 100px;
+  }
+}

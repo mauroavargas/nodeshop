@@ -1,0 +1,28 @@
+.input {
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  box-shadow: 0 1px 8px 0px rgba(0,0,0,.1) inset;
+  color: #555;
+  font-size: 14px;
+  height: 35px;
+  padding: 0 12px;
+  width: 100%;
+}
+.input::placeholder {
+  font-family: 'Roboto Condensed';
+  letter-spacing: 1.4px;
+}
+.input-search {
+  position: relative;
+  & .input {
+    border-radius: 23px;
+    padding-left: 40px;
+  }
+  & .material-icons {
+    color: #888;
+    left: 10px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
