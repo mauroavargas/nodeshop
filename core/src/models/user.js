@@ -17,6 +17,11 @@ const schema = new Schema({
   password: {
     type: Schema.Types.String,
     required: true
+  },
+  photo: {
+    type: Schema.Types.String,
+    required: false,
+    default: '/images/avatar-default.png'
   }
 });
 
