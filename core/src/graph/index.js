@@ -2,6 +2,7 @@ import { readdirSync, readFileSync } from 'fs';
 import { join } from 'path';
 import { makeExecutableSchema } from 'graphql-tools';
 import aboutMe from './resolvers/about-me';
+import aboutSomeone from './resolvers/about-someone';
 import register from './resolvers/register';
 
 /**
@@ -12,7 +13,8 @@ export default () => {
   // Structure the resolvers
   const resolvers = {
     Query: {
-      aboutMe
+      aboutMe,
+      aboutSomeone
     },
     Mutation: {
       register
