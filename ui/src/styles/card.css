@@ -1,0 +1,25 @@
+@import "variables.css";
+
+.card {
+  background-color: #fff;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  display: inline-block;
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+
+  &.card--level-1 {
+    box-shadow: var(--shadow-one);
+  }
+  &.card--level-2 {
+    box-shadow: var(--shadow-two);
+  }
+  &.card--level-3 {
+    box-shadow: var(--shadow-three);
+  }
+  &.card--level-4 {
+    box-shadow: var(--shadow-four);
+  }
+  &.card--level-5 {
+    box-shadow: var(--shadow-five);
+  }
+}
