@@ -1,0 +1,10 @@
+.container {
+  display: flex;
+
+  &.container--center-hoz {
+    justify-content: center;
+  }
+  &.container--center-vert {
+    align-items: center;
+  }
+}
