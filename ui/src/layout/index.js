@@ -19,7 +19,7 @@ export default class extends Component {
 
   render() {
     return (
-      <main className="container">
+      <main className="layout">
         <Brand key="br4nd" logged={this.state.logged} />
         { this.props.children }
       </main>
