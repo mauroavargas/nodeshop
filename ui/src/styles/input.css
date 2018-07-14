@@ -1,21 +1,31 @@
+@import "variables.css";
+
 .input {
   border: 1px solid #ddd;
   border-radius: 3px;
-  box-shadow: 0 1px 8px 0px rgba(0,0,0,.1) inset;
-  color: #555;
+  /*box-shadow: 0 1px 8px 0px rgba(0,0,0,.1) inset;*/
+  color: var(--text-color);
   font-size: 14px;
-  height: 35px;
+  height: 40px;
   padding: 0 12px;
   width: 100%;
+
+  &:focus {
+    border-color: rgba(0, 140, 225, .7);
+    outline: none;
+  }
 }
 .input::placeholder {
+  color: #aaa;
+}
+.input-search::placeholder {
   font-family: 'Roboto Condensed';
   letter-spacing: 1.4px;
 }
-.input-search {
+.input-search,
+.input-addon {
   position: relative;
   & .input {
-    border-radius: 23px;
     padding-left: 40px;
   }
   & .material-icons {
