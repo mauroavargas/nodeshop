@@ -5,6 +5,7 @@
   />
 </p>
 <hr />
+
 ### What is Nodeshop?
 
 Nodeshop (will be) is a web application that works as an online store. This application is being writting as proof of concept and demo for a tutorial serie that will posted on [Dev.to](https://dev.to).
