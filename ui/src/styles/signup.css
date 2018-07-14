@@ -1,0 +1,51 @@
+@import "variables.css";
+
+.page.signup {
+  align-items: flex-start;
+  background: #fafbfc;
+  display: flex;
+  min-height: calc(100vh - 60px);
+  justify-content: center;
+
+  & .card {
+    width: 500px;
+
+    & .form {
+      padding: 50px;
+
+      & .form-body {
+        padding: 20px 0 20px 0;
+
+        & .input {
+          margin: 10px 0;
+        }
+      }
+
+      & .form-footer {
+        & .button {
+          width: 100%;
+        }
+      }
+
+      & .details {
+        padding-top: 20px;
+        text-align: center;
+
+        & a {
+          color: var(--gray);
+          font-size: 14px;
+        }
+      }
+
+      /* & .row {
+        display: flex;
+        justify-content: space-between;
+        margin: 15px 0;
+
+        & * {
+          flex: 0 0 48%;
+        }
+      } */
+    }
+  }
+}
