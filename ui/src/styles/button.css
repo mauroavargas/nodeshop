@@ -1,0 +1,33 @@
+@import "variables.css";
+
+.button {
+  align-items: center;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  box-shadow: var(--shadow-one);
+  display: flex;
+  font-size: 14px;
+  height: 40px;
+  justify-content: center;
+  padding: 0 10px;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &.button--default {
+    background-color: #fcfcfc;
+    color: var(-text-color);
+  }
+
+  &.button--primary {
+    background-color: var(--primary);
+    border-color: var(--primary);
+    color: #fff;
+  }
+  &.button--success {
+    background-color: var(--success);
+    border-color: var(--success);
+    color: #fff;
+  }
+}
