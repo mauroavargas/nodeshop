@@ -8,7 +8,7 @@ export default class extends React.Component {
         src={this.props.source}
         height={this.props.height}
         width={this.props.width}
-        radius={`${this.props.radius}%`}
+        style={{ borderRadius: `${this.props.radius}%` }}
         alt={this.props.alt || 'default-alt'}
       />
     );
