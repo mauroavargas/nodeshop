@@ -1,5 +1,5 @@
-import InputSimple from './simple';
-import InputComposed from './composed';
+import Input from './simple';
+import InputWithIcon from './with-icon';
 
-export { InputSimple };
-export { InputComposed };
+export { Input };
+export { InputWithIcon };
