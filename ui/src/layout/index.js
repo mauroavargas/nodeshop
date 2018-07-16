@@ -1,26 +1,28 @@
 /* eslint no-unused-vars: off */
 import React, { Component } from 'react';
+import { actions } from '../store';
+import * as Auth from '../services/auth';
 import Brand from '../components/brand';
+import TopBar from '../components/topbar';
 
 export default class extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      logged: false
-    };
+  componentWillMount() {
+    if (Auth.isLogged()) {
+      actions.aboutMe();
+    }
   }
 
-  componentDidMount() {
-    const sessionToken = localStorage.getItem('session-token');
-    if (sessionToken) {
-      // TODO make request to the API to get the user info
+  componentWillUpdate() {
+    if (Auth.isLogged()) {
+      actions.aboutMe();
     }
   }
 
   render() {
     return (
       <main className="layout">
-        <Brand key="br4nd" logged={this.state.logged} />
+        <Brand />
+        <TopBar key="br4nd" />
         { this.props.children }
       </main>
     );
