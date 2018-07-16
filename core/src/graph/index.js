@@ -2,8 +2,11 @@ import { readdirSync, readFileSync } from 'fs';
 import { join } from 'path';
 import { makeExecutableSchema } from 'graphql-tools';
 import aboutMe from './resolvers/about-me';
-import findByEmail from './resolvers/find-by-email';
-import register from './resolvers/register';
+// import findByEmail from './resolvers/find-by-email';
+import login from './resolvers/login';
+import loginSocial from './resolvers/login-social';
+import signup from './resolvers/signup';
+import signupSocial from './resolvers/signup-social';
 
 /**
  * Returns the processed GraphQL information,
@@ -14,10 +17,13 @@ export default () => {
   const resolvers = {
     Query: {
       aboutMe,
-      findByEmail
+      // findByEmail,
+      login,
+      loginSocial
     },
     Mutation: {
-      register
+      signup,
+      signupSocial
     }
   };
   const typeDefs = `
