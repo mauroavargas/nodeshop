@@ -1,11 +1,44 @@
 /* eslint no-unused-vars: off */
 import React from 'react';
+import { withRouter } from 'react-router';
 import { NavLink } from 'react-router-dom';
+import { Button } from '../../components/button';
+import { InputWithIcon } from '../../components/input';
 import Card from '../../components/card';
-import { InputSimple, InputComposed } from '../../components/input';
 import Icon from '../../components/icon';
+import Image from '../../components/image';
+import Text from '../../components/text';
+import * as Auth from '../../services/auth';
 
-export default class extends React.Component {
+class Signup extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      firstName: '',
+      lastName: '',
+      email: '',
+      password: ''
+    };
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleChange(e) {
+    this.setState({ ...this.state, [e.target.name]: e.target.value });
+  }
+
+  async handleSubmit(e) {
+    e.preventDefault();
+    try {
+      const token = await Auth.signup({ ...this.state });
+      Auth.saveSession(token);
+      this.props.history.push('/');
+    } catch (err) {
+      // TODO: show the errors
+      console.warn(err);
+    }
+  }
+
   render() {
     return (
       <div className="signup page">
@@ -13,30 +46,40 @@ export default class extends React.Component {
           <form className="form">
             <h3>Sign up</h3>
             <hr className="separator"/>
+            <div className="container container--center-hoz image-container">
+              <Image
+                source="/images/write-circle-logo.png"
+                height={140}
+                width={140}
+                rounded={100}
+              />
+            </div>
             <article className="form-body">
-              <InputComposed
+              <InputWithIcon
                 type="text"
                 placeholder="First name"
                 icon={<Icon name="person_outline"/>}
               />
-              <InputComposed
+              <InputWithIcon
                 type="text"
                 placeholder="Last name"
                 icon={<Icon name="sentiment_satisfied_alt"/>}
               />
-              <InputComposed
+              <InputWithIcon
                 type="email"
                 placeholder="Email"
                 icon={<Icon name="alternate_email" />}
               />
-              <InputComposed
+              <InputWithIcon
                 type="password"
                 placeholder="Password"
                 icon={<Icon name="lock_outline" />}
               />
             </article>
             <footer className="form-footer">
-              <button className="button button--success">Sign up</button>
+              <Button type="secondary" htmlType="submit">
+                <Text color="white" content="Sign up" onClick={this.signup}/>
+              </Button>
             </footer>
           </form>
         </Card>
@@ -44,6 +87,8 @@ export default class extends React.Component {
     );
   }
 }
+
+export default withRouter(Signup);
 
 /*
 <section className="row">
