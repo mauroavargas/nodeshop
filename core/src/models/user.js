@@ -16,7 +16,7 @@ const schema = new Schema({
   },
   password: {
     type: Schema.Types.String,
-    required: true
+    required: false
   },
   photo: {
     type: Schema.Types.String,
