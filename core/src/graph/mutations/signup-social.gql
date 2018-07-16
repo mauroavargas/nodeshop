@@ -1,0 +1,6 @@
+signupSocial(
+  firstName: String!,
+  lastName: String!,
+  email: String!,
+  photo: String!
+) : String
