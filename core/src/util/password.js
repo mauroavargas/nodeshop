@@ -23,7 +23,7 @@ export const hashPwd = (pwd) => {
  * pwd: plain entered password
  * hash: stored hashed password
  */
-export const checkPwd = (pwd, hash) => {
+export const verify = (pwd, hash) => {
   return new Promise((resolve, reject) => {
     Bcrypt.compare(pwd, hash, (err, res) => {
       if (err) { reject(err); }
