@@ -56,8 +56,9 @@ i.material-icons {
   /* Colors */
   --text-color: #444;
   --gray: #777;
-  --primary: #3498db;
-  --success: #1abc9c;
+  --primary: #00B16A;
+  --primary: #26C281;
+  --secondary: #9B59B6;
   /* Shadows */
   --shadow-one: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
   --shadow-two: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
@@ -76,16 +77,21 @@ h6 {
 }
 .text {
   color: var(--text-color);
-  font-size: 1rem
+  font-size: 0.875rem
 }
-.text.light {
-    color: #888;
+.text.text--white {
+    color: #fff;
+  }
+.text.text--gray {
+    color: var(--gray);
+  }
+.text.text--light {
     font-weight: 300;
   }
-.text.bold {
+.text.text--bold {
     font-weight: 600;
   }
-.text.danger {
+.text.text--danger {
     color: #d53400;
   }
 .separator {
@@ -177,18 +183,21 @@ h6 {
 .button:hover {
     cursor: pointer;
   }
+.button i, .button .image {
+    margin-right: 10px;
+  }
 .button.button--default {
     background-color: #fcfcfc;
-    color: var(-text-color);
+    color: var(--text-color);
   }
 .button.button--primary {
     background-color: var(--primary);
     border-color: var(--primary);
     color: #fff;
   }
-.button.button--success {
-    background-color: var(--success);
-    border-color: var(--success);
+.button.button--secondary {
+    background-color: var(--secondary);
+    border-color: var(--secondary);
     color: #fff;
   }
 .card {
@@ -240,7 +249,7 @@ h6 {
       padding: 50px
     }
 .page.login .card .form .form-body {
-        padding: 20px 0 20px 0
+        padding: 20px 0 10px 0
       }
 .page.login .card .form .form-body .input {
           margin: 10px 0;
@@ -248,6 +257,49 @@ h6 {
 .page.login .card .form .form-footer .button {
           width: 100%;
         }
+.page.login .card .form .social-login {
+        margin: 10px 0
+      }
+.page.login .card .form .social-login .login-options-separator {
+          align-items: center;
+          color: var(--text-color);
+          font-size: 0.875rem;
+          display: flex;
+          justify-content: center;
+          margin: 10px 0
+        }
+.page.login .card .form .social-login .login-options-separator:before,
+          .page.login .card .form .social-login .login-options-separator:after {
+            border: 1px solid #ddd;
+            content: "";
+            height: 1px;
+            width: 50px;
+          }
+.page.login .card .form .social-login .login-options-separator:before {
+            margin-right: 15px;
+          }
+.page.login .card .form .social-login .login-options-separator:after {
+            margin-left: 15px;
+          }
+.page.login .card .form .social-login .button {
+          position: relative;
+          width: 100%
+        }
+.page.login .card .form .social-login .button.button--facebook {
+            background-color: #3D5796;
+            color: #fff;
+          }
+.page.login .card .form .social-login .button.button--google {
+            background-color: #fff;
+            color: var(--text-color);
+          }
+.page.login .card .form .social-login .button i, .page.login .card .form .social-login .button .image {
+            left: 20px;
+            position: absolute;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+                    transform: translateY(-50%);
+          }
 .page.login .card .form .details {
         padding-top: 20px;
         text-align: center
@@ -313,14 +365,22 @@ h6 {
 /* Organisms */
 .brand {
   align-items: center;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #e7e7e7;
+  display: flex;
+  height: 40px;
+  justify-content: space-between;
+  padding: 0 40px;
+}
+.topbar {
+  align-items: center;
+  border-bottom: 1px solid #e7e7e7;
   display: flex;
   height: 60px;
   justify-content: space-between;
-  padding: 0 25px;
+  padding: 0 40px 0 25px;
   position: relative
 }
-.brand .logo {
+.topbar .logo {
     display: inline-block;
     left: 50%;
     position: absolute;
@@ -328,35 +388,56 @@ h6 {
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
   }
-.brand .input-search {
+.topbar .input-search {
     min-width: 250px
   }
-.brand .input-search .input {
+.topbar .input-search .input {
       border: none;
       box-shadow: none
     }
-.brand .input-search .input::-webkit-input-placeholder {
+.topbar .input-search .input::-webkit-input-placeholder {
+        font-family: 'Roboto Condensed';
         font-size: 1rem;
         font-weight: 300;
+        letter-spacing: 0.075rem;
       }
-.brand .input-search .input:-ms-input-placeholder {
+.topbar .input-search .input:-ms-input-placeholder {
+        font-family: 'Roboto Condensed';
         font-size: 1rem;
         font-weight: 300;
+        letter-spacing: 0.075rem;
       }
-.brand .input-search .input::-ms-input-placeholder {
+.topbar .input-search .input::-ms-input-placeholder {
+        font-family: 'Roboto Condensed';
         font-size: 1rem;
         font-weight: 300;
+        letter-spacing: 0.075rem;
       }
-.brand .input-search .input::placeholder {
+.topbar .input-search .input::placeholder {
+        font-family: 'Roboto Condensed';
         font-size: 1rem;
         font-weight: 300;
+        letter-spacing: 0.075rem;
       }
-.brand .input-search .input:focus {
+.topbar .input-search .input:focus {
         outline: none;
       }
-.brand a:not(.logo):hover {
+.topbar a:not(.logo):hover {
     color: #888;
   }
+.topbar .user {
+    align-items: center;
+    cursor: pointer;
+    display: inline-flex;
+    height: 100%;
+    justify-content: space-between
+  }
+.topbar .user .text {
+      margin-left: 10px;
+    }
+.topbar .user:hover {
+      background-color: #f9f9f9;
+    }
 .banner {
   align-items: center;
   background-color: #fbfbfb;
