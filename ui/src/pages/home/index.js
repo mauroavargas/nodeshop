@@ -6,9 +6,11 @@ import Banner from '../../components/banner';
 
 export default class extends React.Component {
   render() {
-    return ([
-      <Banner key="b4nn3r" />
-    ]);
+    return (
+      <div className="page home" style={{ padding: 0 }}>
+        <Banner key="b4nn3r" />
+      </div>
+    );
   }
 }
 

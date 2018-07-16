@@ -15,9 +15,13 @@
     cursor: pointer;
   }
 
+  & i, & .image {
+    margin-right: 10px;
+  }
+
   &.button--default {
     background-color: #fcfcfc;
-    color: var(-text-color);
+    color: var(--text-color);
   }
 
   &.button--primary {
@@ -25,9 +29,9 @@
     border-color: var(--primary);
     color: #fff;
   }
-  &.button--success {
-    background-color: var(--success);
-    border-color: var(--success);
+  &.button--secondary {
+    background-color: var(--secondary);
+    border-color: var(--secondary);
     color: #fff;
   }
 }
