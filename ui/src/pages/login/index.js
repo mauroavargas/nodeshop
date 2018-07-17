@@ -3,12 +3,12 @@ import React from 'react';
 import { withRouter } from 'react-router';
 import { NavLink } from 'react-router-dom';
 import { actions } from '../../store';
-import { InputWithIcon } from '../../components/input';
-import { Button } from '../../components/button';
-import Card from '../../components/card';
-import Icon from '../../components/icon';
-import Image from '../../components/image';
-import Text from '../../components/text';
+import { InputWithIcon } from '../../components/shared/input';
+import Button from '../../components/shared/button';
+import Card from '../../components/shared/card';
+import Icon from '../../components/shared/icon';
+import Image from '../../components/shared/image';
+import Text from '../../components/shared/text';
 import SocialAuth from './social';
 import * as Auth from '../../services/auth';
 

@@ -1,6 +1,6 @@
 /* eslint no-unused-vars: off */
 import React from 'react';
-import Text from '../text';
+import Text from '../../shared/text';
 
 export default class extends React.Component {
   render() {

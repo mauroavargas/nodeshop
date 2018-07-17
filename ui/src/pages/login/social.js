@@ -2,9 +2,9 @@
 import React from 'react';
 import { withRouter } from 'react-router';
 import { actions } from '../../store';
-import { Button } from '../../components/button';
-import Image from '../../components/image';
-import Text from '../../components/text';
+import Button from '../../components/shared/button';
+import Image from '../../components/shared/image';
+import Text from '../../components/shared/text';
 import * as Auth from '../../services/auth';
 
 class Social extends React.Component {

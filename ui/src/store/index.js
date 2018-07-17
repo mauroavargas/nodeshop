@@ -1,16 +1,10 @@
 import createStore from 'react-waterfall';
-import auth from '../states/auth';
-import login from '../actions/login';
-import aboutMe from '../actions/about-me';
+import _states from './states';
+import _actions from './actions';
 
 const config = {
-  initialState: {
-    auth
-  },
-  actionsCreators: {
-    login,
-    aboutMe
-  }
+  initialState: _states,
+  actionsCreators: _actions
 };
 
 export const {

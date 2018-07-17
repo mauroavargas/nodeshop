@@ -1,8 +1,8 @@
 /* eslint no-unused-vars: off */
 import React from 'react';
 import uuid from 'uuid';
-import { Query } from 'react-apollo';
-import Banner from '../../components/banner';
+// import { Query } from 'react-apollo';
+import Banner from '../../components/app/banner';
 
 export default class extends React.Component {
   render() {

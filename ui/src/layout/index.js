@@ -2,8 +2,8 @@
 import React, { Component } from 'react';
 import { actions } from '../store';
 import * as Auth from '../services/auth';
-import Brand from '../components/brand';
-import TopBar from '../components/topbar';
+import Brand from '../components/app/brand';
+import TopBar from '../components/app/topbar';
 
 export default class extends Component {
   componentWillMount() {

@@ -1,9 +1,9 @@
 /* eslint no-unused-vars: off */
 import React from 'react';
-import { connect } from '../../store';
-import Image from '../image';
-import Text from '../text';
-import Icon from '../icon';
+import { connect } from '../../../store';
+import Image from '../../shared/image';
+import Text from '../../shared/text';
+import Icon from '../../shared/icon';
 
 class User extends React.Component {
   render() {

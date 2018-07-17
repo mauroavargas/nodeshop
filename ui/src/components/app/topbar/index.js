@@ -1,6 +1,6 @@
 /* eslint no-unused-vars: off */
 import React from 'react';
-import { connect } from '../../store';
+import { connect } from '../../../store';
 import Logo from './logo';
 import Search from './search';
 import User from './user';
