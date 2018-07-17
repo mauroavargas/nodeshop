@@ -6,7 +6,9 @@ export default class extends React.Component {
   render() {
     return (
       <div>
-        <NavLink to="/login">log in</NavLink> <span className="text">or</span> <NavLink to="/signup">sign up</NavLink>
+        <NavLink to="/login" style={{ color: '#fff' }}>log in</NavLink>
+        <span className="text text--white" style={{ margin: '0 5px' }}>or</span>
+        <NavLink to="/signup" style={{ color: '#fff' }}>sign up</NavLink>
       </div>
     );
   }
