@@ -3,7 +3,7 @@
 .input {
   border: 1px solid #ddd;
   border-radius: 3px;
-  /*box-shadow: 0 1px 8px 0px rgba(0,0,0,.1) inset;*/
+  box-shadow: 0 1px 8px 0px rgba(0,0,0,.1) inset;
   color: var(--text-color);
   font-size: 14px;
   height: 40px;

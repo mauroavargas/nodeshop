@@ -2,9 +2,24 @@
   /* Colors */
   --text-color: #444;
   --gray: #777;
-  --primary: #00B16A;
-  --primary: #26C281;
-  --secondary: #9B59B6;
+  /* --primary: #00B16A; */
+  --green: #26c281;
+  --primary: #26c281;
+  --secondary: #9b59b6;
+  --purple: #9b59b6;
+  --cyan: #0099CC;
+  --blue: #0075B0;
+  --blue--dark: #00375E;
+  --cyan--light: #DEF5FD;
+  --magenta: #EE2C70;
+  --purple: #6837C8;
+  /* grayscale */
+  --gray--print: #8B8D8E;
+  --gray--bright: #F3F3F3;
+  --gray--silver: #E7E7E7;
+  --gray: #8B8D8E;
+  --gray-light: #C8C7C7;
+  --gray-dark: #333333;
   /* Shadows */
   --shadow-one: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
   --shadow-two: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);

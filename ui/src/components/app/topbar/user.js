@@ -16,6 +16,7 @@ class User extends React.Component {
           radius={100}
         />
         <Text
+          color="white"
           content={`${this.props.auth.user.firstName} ${this.props.auth.user.lastName}`}
         />
         <Icon name="arrow_drop_down" />

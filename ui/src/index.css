@@ -34,31 +34,29 @@ a:hover {
 i.material-icons {
   color: #555;
 }
-/* Fade transition */
-.fade-appear,
-.fade-enter {
-  opacity: 0.01;
-}
-.fade-appear-active,
-.fade-enter-active {
-  opacity: 1;
-  transition: opacity 500ms ease-in;
-}
-.fade-exit {
-  opacity: 1;
-}
-.fade-exit-active {
-  opacity: 0.01;
-  transition: opacity 500ms ease-in;
-}
 /* Atoms and Molecules */
 :root {
   /* Colors */
   --text-color: #444;
   --gray: #777;
-  --primary: #00B16A;
-  --primary: #26C281;
-  --secondary: #9B59B6;
+  /* --primary: #00B16A; */
+  --green: #26c281;
+  --primary: #26c281;
+  --secondary: #9b59b6;
+  --purple: #9b59b6;
+  --cyan: #0099CC;
+  --blue: #0075B0;
+  --blue--dark: #00375E;
+  --cyan--light: #DEF5FD;
+  --magenta: #EE2C70;
+  --purple: #6837C8;
+  /* grayscale */
+  --gray--print: #8B8D8E;
+  --gray--bright: #F3F3F3;
+  --gray--silver: #E7E7E7;
+  --gray: #8B8D8E;
+  --gray-light: #C8C7C7;
+  --gray-dark: #333333;
   /* Shadows */
   --shadow-one: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
   --shadow-two: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
@@ -115,7 +113,7 @@ h6 {
 .input {
   border: 1px solid #ddd;
   border-radius: 3px;
-  /*box-shadow: 0 1px 8px 0px rgba(0,0,0,.1) inset;*/
+  box-shadow: 0 1px 8px 0px rgba(0,0,0,.1) inset;
   color: var(--text-color);
   font-size: 0.875rem;
   height: 40px;
@@ -231,7 +229,24 @@ h6 {
 .container.container--center-vert {
     align-items: center;
   }
-/* Pages */
+/* Styles for the site */
+/* Fade transition */
+.fade-appear,
+.fade-enter {
+  opacity: 0.01;
+}
+.fade-appear-active,
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+.fade-exit {
+  opacity: 1;
+}
+.fade-exit-active {
+  opacity: 0.01;
+  transition: opacity 500ms ease-in;
+}
 .page {
   padding: 40px;
 }
@@ -362,7 +377,6 @@ h6 {
         }
       } */
     }
-/* Organisms */
 .brand {
   align-items: center;
   border-bottom: 1px solid #e7e7e7;
@@ -373,11 +387,12 @@ h6 {
 }
 .topbar {
   align-items: center;
+  background-color: var(--blue);
   border-bottom: 1px solid #e7e7e7;
   display: flex;
   height: 60px;
   justify-content: space-between;
-  padding: 0 40px 0 25px;
+  padding: 0 25px 0 40px;
   position: relative
 }
 .topbar .logo {
@@ -388,38 +403,38 @@ h6 {
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
   }
-.topbar .input-search {
+.topbar .input-addon {
     min-width: 250px
   }
-.topbar .input-search .input {
-      border: none;
-      box-shadow: none
+.topbar .input-addon .input {
+      border: none
+      /* box-shadow: none; */
     }
-.topbar .input-search .input::-webkit-input-placeholder {
-        font-family: 'Roboto Condensed';
-        font-size: 1rem;
+.topbar .input-addon .input::-webkit-input-placeholder {
+        /* font-family: 'Roboto Condensed'; */
+        font-size: 0.875rem;
         font-weight: 300;
-        letter-spacing: 0.075rem;
+        /* letter-spacing: 1.1px; */
       }
-.topbar .input-search .input:-ms-input-placeholder {
-        font-family: 'Roboto Condensed';
-        font-size: 1rem;
+.topbar .input-addon .input:-ms-input-placeholder {
+        /* font-family: 'Roboto Condensed'; */
+        font-size: 0.875rem;
         font-weight: 300;
-        letter-spacing: 0.075rem;
+        /* letter-spacing: 1.1px; */
       }
-.topbar .input-search .input::-ms-input-placeholder {
-        font-family: 'Roboto Condensed';
-        font-size: 1rem;
+.topbar .input-addon .input::-ms-input-placeholder {
+        /* font-family: 'Roboto Condensed'; */
+        font-size: 0.875rem;
         font-weight: 300;
-        letter-spacing: 0.075rem;
+        /* letter-spacing: 1.1px; */
       }
-.topbar .input-search .input::placeholder {
-        font-family: 'Roboto Condensed';
-        font-size: 1rem;
+.topbar .input-addon .input::placeholder {
+        /* font-family: 'Roboto Condensed'; */
+        font-size: 0.875rem;
         font-weight: 300;
-        letter-spacing: 0.075rem;
+        /* letter-spacing: 1.1px; */
       }
-.topbar .input-search .input:focus {
+.topbar .input-addon .input:focus {
         outline: none;
       }
 .topbar a:not(.logo):hover {
@@ -430,19 +445,23 @@ h6 {
     cursor: pointer;
     display: inline-flex;
     height: 100%;
-    justify-content: space-between
+    justify-content: space-between;
+    padding: 0 10px
   }
 .topbar .user .text {
       margin-left: 10px;
     }
+.topbar .user i {
+      color: #fff;
+    }
 .topbar .user:hover {
-      background-color: #f9f9f9;
+      background-color: #006A9F;
     }
 .banner {
   align-items: center;
   background-color: #fbfbfb;
   border-bottom: 1px solid #ddd;
-  box-shadow: 0 1px 10px 0 rgba(0,0,0,.1) inset;
+  box-shadow: 0 1px 15px 0 rgba(0,0,0,.13) inset;
   display: flex;
   height: 50px;
   justify-content: center

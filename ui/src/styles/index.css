@@ -1,6 +1,5 @@
 @import "base.css";
 @import "common.css";
-@import "transitions.css";
 /* Atoms and Molecules */
 @import "typography.css";
 @import "separator.css";
@@ -9,11 +8,11 @@
 @import "button.css";
 @import "card.css";
 @import "container.css";
-/* Pages */
-@import "page.css";
-@import "pages/login.css";
-@import "pages/signup.css";
-/* Organisms */
-@import "brand.css";
-@import "topbar.css";
-@import "banner.css";
+/* Styles for the site */
+@import "site/transitions.css";
+@import "site/page.css";
+@import "site/login.page.css";
+@import "site/signup.page.css";
+@import "site/brand.css";
+@import "site/topbar.css";
+@import "site/banner.css";
