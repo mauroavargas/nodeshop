@@ -1,9 +1,10 @@
 /* eslint no-unused-vars: off */
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import { connect } from '../../../store';
 import Image from '../../shared/image';
 import Text from '../../shared/text';
-import Icon from '../../shared/icon';
 
 class User extends React.Component {
   render() {
@@ -16,10 +17,11 @@ class User extends React.Component {
           radius={100}
         />
         <Text
-          color="white"
+          color="gray"
+          weight="bold"
           content={`${this.props.auth.user.firstName} ${this.props.auth.user.lastName}`}
         />
-        <Icon name="arrow_drop_down" />
+        <FontAwesomeIcon icon={faChevronDown} />
       </div>
     );
   }

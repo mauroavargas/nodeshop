@@ -1,5 +1,2 @@
-import Input from './simple';
-import InputWithIcon from './with-icon';
-
-export { Input };
-export { InputWithIcon };
+export { default as Input } from './simple';
+export { default as InputAddon } from './with-addon';

@@ -1,5 +1,5 @@
 body {
-  font-family: 'Lato';
+  font-family: 'Source Sans Pro';
   font-size: 16px;
 }
 a {
@@ -9,7 +9,4 @@ a {
   &:hover {
     text-decoration: underline;
   }
-}
-i.material-icons {
-  color: #555;
 }

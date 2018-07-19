@@ -28,8 +28,8 @@
   & .input {
     padding-left: 40px;
   }
-  & .material-icons {
-    color: #888;
+  & .material-icons, & svg {
+    color: #aaa;
     left: 10px;
     position: absolute;
     top: 50%;

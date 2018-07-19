@@ -21,7 +21,7 @@ html {
   border-radius: 20px;
 }
 body {
-  font-family: 'Lato';
+  font-family: 'Source Sans Pro';
   font-size: 1rem;
 }
 a {
@@ -31,9 +31,6 @@ a {
 a:hover {
     text-decoration: underline;
   }
-i.material-icons {
-  color: #555;
-}
 /* Atoms and Molecules */
 :root {
   /* Colors */
@@ -75,7 +72,7 @@ h6 {
 }
 .text {
   color: var(--text-color);
-  font-size: 0.875rem
+  font-size: 0.9375rem
 }
 .text.text--white {
     color: #fff;
@@ -159,8 +156,8 @@ h6 {
 .input-search .input, .input-addon .input {
     padding-left: 40px;
   }
-.input-search .material-icons, .input-addon .material-icons {
-    color: #888;
+.input-search .material-icons, .input-search svg, .input-addon .material-icons, .input-addon svg {
+    color: #aaa;
     left: 10px;
     position: absolute;
     top: 50%;
@@ -387,8 +384,10 @@ h6 {
 }
 .topbar {
   align-items: center;
-  background-color: var(--blue);
-  border-bottom: 1px solid #e7e7e7;
+  /* background-color: var(--cyan); */
+  background-color: #fff;
+  border-bottom: 1px solid rgba(0,0,0,.08);
+  box-shadow: 0 4px 13px -3px rgba(0, 0, 0, 0.10196);
   display: flex;
   height: 60px;
   justify-content: space-between;
@@ -404,33 +403,33 @@ h6 {
             transform: translate(-50%, -50%);
   }
 .topbar .input-addon {
-    min-width: 250px
+    min-width: 280px
   }
 .topbar .input-addon .input {
-      border: none
-      /* box-shadow: none; */
+      border: none;
+      box-shadow: none
     }
 .topbar .input-addon .input::-webkit-input-placeholder {
-        /* font-family: 'Roboto Condensed'; */
-        font-size: 0.875rem;
+        font-family: 'Fira Mono';
+        font-size: 0.9375rem;
         font-weight: 300;
         /* letter-spacing: 1.1px; */
       }
 .topbar .input-addon .input:-ms-input-placeholder {
-        /* font-family: 'Roboto Condensed'; */
-        font-size: 0.875rem;
+        font-family: 'Fira Mono';
+        font-size: 0.9375rem;
         font-weight: 300;
         /* letter-spacing: 1.1px; */
       }
 .topbar .input-addon .input::-ms-input-placeholder {
-        /* font-family: 'Roboto Condensed'; */
-        font-size: 0.875rem;
+        font-family: 'Fira Mono';
+        font-size: 0.9375rem;
         font-weight: 300;
         /* letter-spacing: 1.1px; */
       }
 .topbar .input-addon .input::placeholder {
-        /* font-family: 'Roboto Condensed'; */
-        font-size: 0.875rem;
+        font-family: 'Fira Mono';
+        font-size: 0.9375rem;
         font-weight: 300;
         /* letter-spacing: 1.1px; */
       }
@@ -449,23 +448,26 @@ h6 {
     padding: 0 10px
   }
 .topbar .user .text {
-      margin-left: 10px;
+      margin: 0 10px;
     }
-.topbar .user i {
-      color: #fff;
+.topbar .user svg {
+      color: #666;
     }
 .topbar .user:hover {
-      background-color: #006A9F;
+      background-color: #f9f9f9;
     }
 .banner {
   align-items: center;
-  background-color: #fbfbfb;
-  border-bottom: 1px solid #ddd;
-  box-shadow: 0 1px 15px 0 rgba(0,0,0,.13) inset;
+  background-color: rgba(0,0,0,.02);
+  border-bottom: 1px solid rgba(0,0,0,.08);
+  /* box-shadow: 0 1px 15px 0 rgba(0,0,0,.13) inset; */
   display: flex;
   height: 50px;
   justify-content: center
 }
-.banner .text:nth-child(2) {
-    margin: 0 12px;
+.banner .text {
+    font-size: 1rem
   }
+.banner .text:nth-child(2) {
+      margin: 0 12px;
+    }

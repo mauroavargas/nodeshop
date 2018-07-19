@@ -2,7 +2,7 @@
 import React from 'react';
 import { withRouter } from 'react-router';
 import { NavLink } from 'react-router-dom';
-import { InputWithIcon } from '../../components/shared/input';
+import { InputAddon } from '../../components/shared/input';
 import Button from '../../components/shared/button';
 import Card from '../../components/shared/card';
 import Icon from '../../components/shared/icon';
@@ -55,22 +55,22 @@ class Signup extends React.Component {
               />
             </div>
             <article className="form-body">
-              <InputWithIcon
+              <InputAddon
                 type="text"
                 placeholder="First name"
                 icon={<Icon name="person_outline"/>}
               />
-              <InputWithIcon
+              <InputAddon
                 type="text"
                 placeholder="Last name"
                 icon={<Icon name="sentiment_satisfied_alt"/>}
               />
-              <InputWithIcon
+              <InputAddon
                 type="email"
                 placeholder="Email"
                 icon={<Icon name="alternate_email" />}
               />
-              <InputWithIcon
+              <InputAddon
                 type="password"
                 placeholder="Password"
                 icon={<Icon name="lock_outline" />}

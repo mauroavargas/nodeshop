@@ -6,9 +6,9 @@ export default class extends React.Component {
   render() {
     return (
       <section className="banner">
-        <Text content="Buy with confindence" style={{ fontSize: 15 }}/>
-        <Text weight="light" content="Browse our store and discover awesome stuff." style={{ fontSize: 15 }}/>
-        <Text color="danger" content="Start Buying now!" style={{ fontSize: 15 }}/>
+        <Text content="Buy with confindence"/>
+        <Text color="gray" weight="light" content="Browse our store and discover awesome stuff."/>
+        <Text color="danger" content="Start Buying now!"/>
       </section>
     );
   }

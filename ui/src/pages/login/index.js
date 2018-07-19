@@ -3,7 +3,7 @@ import React from 'react';
 import { withRouter } from 'react-router';
 import { NavLink } from 'react-router-dom';
 import { actions } from '../../store';
-import { InputWithIcon } from '../../components/shared/input';
+import { InputAddon } from '../../components/shared/input';
 import Button from '../../components/shared/button';
 import Card from '../../components/shared/card';
 import Icon from '../../components/shared/icon';
@@ -55,7 +55,7 @@ class Login extends React.Component {
               />
             </div>
             <article className="form-body">
-              <InputWithIcon
+              <InputAddon
                 type="email"
                 placeholder="Email"
                 icon={<Icon name="alternate_email" />}
@@ -63,7 +63,7 @@ class Login extends React.Component {
                 onChange={this.handleChange}
                 value={this.state.email}
               />
-              <InputWithIcon
+              <InputAddon
                 type="password"
                 placeholder="Password"
                 icon={<Icon name="lock_outline" />}
