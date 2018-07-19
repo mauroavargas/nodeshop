@@ -17,8 +17,6 @@ class User extends React.Component {
           radius={100}
         />
         <Text
-          color="gray"
-          weight="bold"
           content={`${this.props.auth.user.firstName} ${this.props.auth.user.lastName}`}
         />
         <FontAwesomeIcon icon={faChevronDown} />
